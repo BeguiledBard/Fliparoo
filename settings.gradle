@@ -1,0 +1,2 @@
+rootProject.name='Fliparoo'
+include ':app'
