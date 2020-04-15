@@ -13,6 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        GradientAnimation();
+    }
+
+    private void GradientAnimation()
+    {
         ConstraintLayout constraintLayout = findViewById(R.id.gradient_layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
