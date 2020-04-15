@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Fliparoo</string>
+    <string name="best_times">BEST TIMES</string>
+    <string name="classic_text">Classic</string>
+    <string name="advanced_text">Advanced</string>
+    <string name="play_game_text">PLAY GAME</string>
+    <string name="advancedTimeText">0:00</string>
+    <string name="classicTimeText">0:00</string>
+    <string name="advancedButton">ADVANCED</string>
+    <string name="classicButton">CLASSIC</string>
 </resources>
