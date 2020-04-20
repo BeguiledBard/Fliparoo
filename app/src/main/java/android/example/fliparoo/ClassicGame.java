@@ -1,7 +1,6 @@
 package android.example.fliparoo;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class ClassicGame extends AppCompatActivity {
