@@ -23,8 +23,6 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //starts running main page animation
-        GradientAnimation();
 
         buttonClassic = findViewById(R.id.classicButton_button);
         buttonAdvanced = findViewById(R.id.advancedButton_button);
@@ -35,6 +33,7 @@ public class MainMenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainMenuActivity.this, GameMenu.class);
                 intent.putExtra(LEVEL, 4);
                 intent.putExtra(FOR_TIMER, CLASSIC);
+                startActivity(intent);
             }
         });
 
@@ -44,18 +43,11 @@ public class MainMenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainMenuActivity.this, GameMenu.class);
                 intent.putExtra(LEVEL, 6);
                 intent.putExtra(FOR_TIMER, ADVANCED);
+                startActivity(intent);
             }
         });
     }
 
-    private void GradientAnimation()
-    {
-        ConstraintLayout constraintLayout = findViewById(R.id.gradient_layout);
-        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();
-    }
 
 
 

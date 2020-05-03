@@ -11,4 +11,5 @@
     <string name="classicGame_name">Classic Game</string>
     <string name="advancedGame_name">Advanced Game</string>
     <string name="timer_text">Timer: 60 seconds</string>
+    <string name="logo_imageview">logo</string>
 </resources>

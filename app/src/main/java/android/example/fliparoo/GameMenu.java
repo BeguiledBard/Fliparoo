@@ -39,8 +39,6 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_menu);
 
-        //starts running main page animation
-        //GradientAnimation();
 
         bindUI();
         initForTimer(numOfSeconds + 1, timer_txt);
@@ -141,16 +139,6 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
             }
 
         }
-    }
-
-    // method for the gradient animation
-    private void GradientAnimation()
-    {
-        ConstraintLayout constraintLayout = findViewById(R.id.gradient_layout);
-        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
