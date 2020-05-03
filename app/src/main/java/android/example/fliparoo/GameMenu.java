@@ -2,10 +2,8 @@ package android.example.fliparoo;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -50,16 +48,16 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
         this.allButtons = new Tile[numOfElements];
         this.allButtonsGraphics = new int [numOfElements/2];
         if(numRow == 4){
-            putAllButtonsGraphicForMedium();
+            putAllButtonsGraphicForClassic();
         }else{
-            putAllButtonsGraphicForHard();
+            putAllButtonsGraphicForAdvanced();
         }
         this.allButtonsGraphicLocation = new int [numOfElements];
         shuffleButtonGraphics();
         initeMemoryButtons(numRow,numCol,theGridLayout);
     }
 
-    public void putAllButtonsGraphicForMedium(){
+    public void putAllButtonsGraphicForClassic(){
         this.allButtonsGraphics[0] = R.drawable.tile0;
         this.allButtonsGraphics[1] = R.drawable.tile1;
         this.allButtonsGraphics[2] = R.drawable.tile2;
@@ -70,7 +68,8 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
         this.allButtonsGraphics[7] = R.drawable.tile7;
     }
 
-    public void putAllButtonsGraphicForHard(){
+
+    public void putAllButtonsGraphicForAdvanced(){
         this.allButtonsGraphics[0] = R.drawable.tile0;
         this.allButtonsGraphics[1] = R.drawable.tile1;
         this.allButtonsGraphics[2] = R.drawable.tile2;
