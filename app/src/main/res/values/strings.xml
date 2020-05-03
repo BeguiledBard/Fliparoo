@@ -8,4 +8,7 @@
     <string name="classicTimeText">0:00</string>
     <string name="advancedButton">ADVANCED</string>
     <string name="classicButton">CLASSIC</string>
+    <string name="classicGame_name">Classic Game</string>
+    <string name="advancedGame_name">Advanced Game</string>
+    <string name="timer_text">Timer: 60 seconds</string>
 </resources>
