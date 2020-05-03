@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_list"
     android:id="@+id/gradient_layout"
-    tools:context=".MainActivity">
+    tools:context=".MainMenuActivity">
 
     <TextView
         android:id="@+id/bestTimes_text"
@@ -158,7 +158,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/advancedButton_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient_list"
