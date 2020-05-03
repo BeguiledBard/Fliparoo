@@ -7,8 +7,16 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MainMenuActivity extends AppCompatActivity {
+    final String LEVEL = "LEVEL";
+    final String FOR_TIMER = "forTimer";
+    final int CLASSIC = 0;
+    final int ADVANCED = 1;
+
+    private Button buttonClassic;
+    private Button buttonAdvanced;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +25,27 @@ public class MainMenuActivity extends AppCompatActivity {
 
         //starts running main page animation
         GradientAnimation();
+
+        buttonClassic = findViewById(R.id.classicButton_button);
+        buttonAdvanced = findViewById(R.id.advancedButton_button);
+
+        buttonClassic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenuActivity.this, GameMenu.class);
+                intent.putExtra(LEVEL, 4);
+                intent.putExtra(FOR_TIMER, CLASSIC);
+            }
+        });
+
+        buttonAdvanced.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenuActivity.this, GameMenu.class);
+                intent.putExtra(LEVEL, 6);
+                intent.putExtra(FOR_TIMER, ADVANCED);
+            }
+        });
     }
 
     private void GradientAnimation()
@@ -28,8 +57,6 @@ public class MainMenuActivity extends AppCompatActivity {
         animationDrawable.start();
     }
 
-    public void LaunchGame(View view) {
-        Intent intent = new Intent(this, GameMenu.class);
-        startActivity(intent);
-    }
+
+
 }

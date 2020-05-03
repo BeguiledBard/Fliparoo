@@ -149,7 +149,6 @@
 
     <Button
         android:id="@+id/classicButton_button"
-        android:onClick="LaunchGame"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient_list"
@@ -159,8 +158,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
-        android:id="@+id/button2"
-        android:onClick="LaunchGame"
+        android:id="@+id/advancedButton_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient_list"
