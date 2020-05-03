@@ -15,12 +15,12 @@ public class Timer extends CountDownTimer {
 
     @Override
     public void onTick(long millisUntilFinished) {
-        timerText.setText("Timer: " + millisUntilFinished/1000 + " seconds");
+        timerText.setText(millisUntilFinished/1000 + " seconds");
     }
 
     @Override
     public void onFinish() {
-        timerText.setText("Timer: " + 0 + " seconds");
+        timerText.setText(0 + " seconds");
         theGameMenu.timeOutForGame();
     }
 }

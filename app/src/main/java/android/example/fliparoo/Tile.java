@@ -34,8 +34,8 @@ public class Tile extends AppCompatButton {
 
         GridLayout.LayoutParams tempParams = new GridLayout.LayoutParams(GridLayout.spec(row), GridLayout.spec(col));
 
-        tempParams.width = (int) getResources().getDisplayMetrics().density * 80;
-        tempParams.height = (int) getResources().getDisplayMetrics().density * 80;
+        tempParams.width = (int) getResources().getDisplayMetrics().density * 70;
+        tempParams.height = (int) getResources().getDisplayMetrics().density * 70;
 
         setLayoutParams(tempParams);
     }

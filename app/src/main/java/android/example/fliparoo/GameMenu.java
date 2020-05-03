@@ -161,7 +161,7 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
 
     // sends a toast to screen to signal that time is up, then calls helper to bring user back to main menu
     public void timeOutForGame() {
-        Toast.makeText(GameMenu.this, "Time's up", Toast.LENGTH_LONG).show();
+        Toast.makeText(GameMenu.this, "Sorry, time is up!", Toast.LENGTH_LONG).show();
         helperForMenu();
     }
 
@@ -200,7 +200,7 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
                 GameMenu.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(GameMenu.this, "Winner", Toast.LENGTH_LONG).show();
+                        Toast.makeText(GameMenu.this, "Congratulations! You Won!", Toast.LENGTH_LONG).show();
                     }
                 });
                 timer.cancel();
