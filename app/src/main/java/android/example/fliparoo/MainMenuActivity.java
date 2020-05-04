@@ -12,8 +12,8 @@ import android.widget.Button;
 public class MainMenuActivity extends AppCompatActivity {
     final String LEVEL = "LEVEL";
     final String FOR_TIMER = "forTimer";
-    final int CLASSIC = 0;
-    final int ADVANCED = 1;
+    final int CLASSIC = 1;
+    final int ADVANCED = 2;
 
     private Button buttonClassic;
     private Button buttonAdvanced;

@@ -54,7 +54,7 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
         }
         this.allButtonsGraphicLocation = new int [numOfElements];
         shuffleButtonGraphics();
-        initeMemoryButtons(numRow,numCol,theGridLayout);
+        initMemoryButtons(numRow,numCol,theGridLayout);
     }
 
     public void putAllButtonsGraphicForClassic(){
@@ -123,11 +123,7 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
         }
         for (int i = 0; i < numOfElements ; i++ ){//swap location
             int temp = this.allButtonsGraphicLocation[i];
-            if(numOfElements == 4){
-                int swapIndex = rand.nextInt(4);
-                allButtonsGraphicLocation[i] = allButtonsGraphicLocation[swapIndex];
-                allButtonsGraphicLocation[swapIndex] = temp;
-            }else if(numOfElements == 16){
+            if(numOfElements == 16){
                 int swapIndex = rand.nextInt(16);
                 allButtonsGraphicLocation[i] = allButtonsGraphicLocation[swapIndex];
                 allButtonsGraphicLocation[swapIndex] = temp;
@@ -141,7 +137,7 @@ public class GameMenu extends AppCompatActivity implements View.OnClickListener 
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void initeMemoryButtons(int numRow, int numCol, GridLayout theGridLayout){
+    public void initMemoryButtons(int numRow, int numCol, GridLayout theGridLayout){
         for (int row = 0; row < numRow ; row++){
             for(int col = 0 ; col <numCol ; col++){
                 Tile tempButton = new Tile(this,row,col,allButtonsGraphics[allButtonsGraphicLocation[row *numCol +col]]);
